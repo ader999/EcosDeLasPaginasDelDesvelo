@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+  {% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="alert alert-success" role="alert">
+                    ¡Documento cargado exitosamente!
+                </div>
+                <div class="card p-4">
+                    <h4 class="text-center">¡Gracias por tu contribución!</h4>
+                    <p class="text-center">Tu documento ha sido enviado y se encuentra disponible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

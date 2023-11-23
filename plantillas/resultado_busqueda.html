@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Posts</title>
+
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div class="container mt-5">
+        <h1 class="display-3 text-center">Resultado de busqueda</h1>
+        <ul class="list-group">
+            {% for post in search_results %}
+            <li class="list-group-item mt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        {% if post.image %}
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="h5 card-title">{{ post.title }}</h2>
+                        <p class="card-text">{{ post.content|slice:":100" }}...</p>
+                        <a href="{% url 'detalle_post' post.id %}" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="pagination justify-content-center">
+            <span class="step-links">
+                <!-- Los enlaces de paginación pueden mantenerse similares -->
+                <!-- ... -->
+            </span>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>
+</html>

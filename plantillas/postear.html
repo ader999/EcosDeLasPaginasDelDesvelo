@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Posts</title>
+    <!-- Agrega los enlaces a Bootstrap CSS y jQuery (si es necesario) -->
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="display-3 text-center">Lista de Repositorio</h1>
+        {% load static %}
+        <ul class="list-group">
+            {% for post in page %}
+            <li class="list-group-item mt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        {% if post.image %}
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="h5 card-title">{{ post.title }}</h2>
+                        <p class="card-text">{{ post.content|slice:":200" }}...</p>
+                        <a href="{% url 'detalle_post' post.id %}" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="pagination justify-content-center">
+            <span class="step-links">
+                {% if page.has_previous %}
+                    <a href="?page=1">&laquo; primera</a>
+                    <a href="?page={{ page.previous_page_number }}">anterior</a>
+                {% endif %}
+                <span class="current-page">{{ page.number }}</span>
+                {% if page.has_next %}
+                    <a href="?page={{ page.next_page_number }}">siguiente</a>
+                    <a href="?page={{ page.paginator.num_pages }}">última &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+
+    
+</body>
+</html>

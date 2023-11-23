@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle del Post</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div class="container mt-5 d-flex justify-content-center align-items-center">
+        <div class="text-center col-md-8">
+            <h1 class="display-4">{{ post.title }}</h1>
+            {% if post.image %}
+            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+            {% endif %}
+            {% if post.video %}
+            <div class="embed-responsive embed-responsive-16by9 mb-4 mt-4">
+                <iframe class="embed-responsive-item embed-responsive-lg" src="{{ post.video }}" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+            <p>{{ post.content }}</p>
+
+            {% if post.pdf_file %}
+               <p>
+                    <a href="{{ post.pdf_file.url }}" target="_blank" class="btn btn-danger">
+                        <i class="fas fa-eye"></i> Ver PDF
+                    </a>
+                    <a href="{{ post.pdf_file.url }}" download class="btn btn-danger">
+                        <i class="fas fa-download"></i> Descargar PDF
+                    </a>
+                </p>
+
+            {% endif %}
+
+            <p><strong>Autor: <a href="{% url 'perfil' username=post.author.username %}">{{ post.author }}</a></strong></p>
+
+
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

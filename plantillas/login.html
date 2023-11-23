@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar sesión</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+
+    <div class="container mt-5">
+    <div class="card p-3" style="max-width: 400px; margin: 0 auto; text-align: center;">
+        <h2 class="text-center">Iniciar sesión</h2>
+
+        {% if messages %}
+            <div class="alert alert-info" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" id="usuario" name="usuario">
+            </div>
+
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" class="form-control" id="contraseña" name="contraseña">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3">Iniciar sesión</button>
+        </form>
+
+        <a href="{% url 'registro_usuario' %}" class="d-block text-center mt-3">Registrarse</a>
+    </div>
+</div>
+
+
+
+    {% endblock %}
+</body>
+</html>

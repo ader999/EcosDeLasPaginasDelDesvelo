@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfil de {{ nombre_completo }}</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container mt-5 d-flex justify-content-center align-items-center">
+        <div class="text-center">
+
+
+
+            <ul class="list-group">
+                <li class="list-group-item mt-3" style="background-color: #f2f5f4; padding: 10px;">
+                    <div class="d-flex align-items-center">
+                        <img src="{{ author.foto_perfil.url }}" alt="{{ user.username }} - Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;" class="mr-5 ">
+                        <h2 class="display-5">{{ nombre_completo }} <strong>({{ author.username }})</strong></h2>
+                    </div>
+                </li>
+
+
+                <h2>Publicaciones del autor</h2>
+
+                {% for post in posts %}
+                <li class="list-group-item mt-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            {% if post.image %}
+                                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+                            {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="h5 card-title">{{ post.title }}</h2>
+                            <p class="card-text">{{ post.content|slice:":200" }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="{% url 'detalle_post' post.id %}" class="btn btn-primary">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
