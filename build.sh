@@ -9,4 +9,4 @@ python manage.py migrate
 
 python manage.py collectstatic --no-input
 
-echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('overader', 'aderjasmirzeasrocha@gmail.com', '00040')" | python manage.py shell
+echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('overader', 'aderjasmirzeasrocha@gmail.com', '00040', nombre='Ader Yasmir', apellidos='Zeas Rocha')" | python manage.py shell
