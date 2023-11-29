@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['192.168.1.106','localhost']
+ALLOWED_HOSTS = []
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -82,13 +82,20 @@ WSGI_APPLICATION = 'repositorio.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default':dj_database_url.config(
+if 'USE_POSTGRESQL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.config(
             default='postgresql://postgres:postgres@localhost/postgres',
             conn_max_age=600
-    )
-}
+        )
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
@@ -161,4 +168,3 @@ EMAIL_HOST_PASSWORD = 'vhzu xxxc qmdc cbdv'  # Contraseña de tu correo electró
 
 
 AUTH_USER_MODEL = 'repositorio.CustomUser'
-
