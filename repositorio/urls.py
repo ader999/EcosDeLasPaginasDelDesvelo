@@ -34,6 +34,8 @@ urlpatterns = [
     path('validar_codigo/', views.validar_codigo, name='validar_codigo'),
     path('resultado_busqueda/', views.buscar_post, name='resultado_busqueda'),
     path('perfil/<str:username>/', views.perfil, name='perfil'),
+    path('configuraciones/', views.configuraciones, name='configuraciones'),
+
 
 ]
 

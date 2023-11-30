@@ -34,23 +34,20 @@
                   <a class="nav-link" href="{% url 'admin:index' %}">Panel de control</a>
                 </li>
 
-
+                 {% if user.is_authenticated %}
                  <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ usr }}
                             </a>
+
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                               {% if user.is_authenticated %}
-                                    <a class="dropdown-item" href="{% url 'perfil' username=user.username %}">Mi perfil</a>
-                                {% endif %}
-
-
+                                <a class="dropdown-item" href="{% url 'perfil' username=user.username %}">Mi perfil</a>
+                                <a class="dropdown-item" href="{% url 'configuraciones'  %}">Configuraciones</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{% url 'cerrar_sesion' %}">Cerrar sesión</a>
                             </div>
                         </li>
-
+                  {% endif %}
 
               </ul>
 

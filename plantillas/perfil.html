@@ -7,6 +7,12 @@
 </head>
 <body>
     {% block content %}
+     <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }} </li>
+            {% endfor %}
+     </ul>
+
     <div class="container mt-5 d-flex justify-content-center align-items-center">
         <div class="text-center">
 

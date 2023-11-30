@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
 from .models import CustomUser, Post
+from django.contrib.auth.forms import PasswordChangeForm
+
 
 class RegistroForm(UserCreationForm):
     password1 = forms.CharField(
@@ -50,3 +52,7 @@ class PostForm(forms.ModelForm):
         fields = ['title','content', 'image', 'pdf_file', 'video', 'categoria']
 
 
+class CambiarContraseñaForm(PasswordChangeForm):
+    class Meta:
+        model = CustomUser  # Reemplaza 'CustomUser' con el modelo de tu usuario
+        fields = ('old_password', 'new_password1', 'new_password2')

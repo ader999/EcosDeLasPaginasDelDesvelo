@@ -15,8 +15,9 @@ from django.utils.safestring import mark_safe
 from django.contrib.auth.models import Group, Permission
 from django.contrib.contenttypes.models import ContentType
 import markdown
+from django.contrib.auth import update_session_auth_hash
 
-from .forms import PostForm, RegistroForm
+from .forms import PostForm, RegistroForm, CambiarContraseñaForm
 from .models import Post, CustomUser
 from .utils import enviar_codigo_confirmacion
 User = get_user_model()
@@ -195,3 +196,28 @@ def perfil(request, username):
     posts = Post.objects.filter(author=author)
     nombre_completo = f"{author.nombre} {author.apellidos}"
     return render(request, 'perfil.html', {'author': author, 'posts': posts, 'nombre_completo': nombre_completo,'usr':pasar_usuario(request)})
+
+def configuraciones(request):
+    if request.method == 'POST':
+        # Procesar la actualización de la foto de perfil directamente en la vista
+        new_photo = request.FILES.get('foto_perfil')
+        if new_photo:
+            request.user.foto_perfil = new_photo
+            request.user.save()
+            messages.success(request, 'La foto de perfil se ha cambiado con éxito.')
+            return redirect('perfil', username=request.user.username)
+
+        # Procesar el cambio de contraseña
+        cambiar_contraseña_form = CambiarContraseñaForm(request.user, request.POST)
+        if cambiar_contraseña_form.is_valid():
+            user = cambiar_contraseña_form.save()
+            update_session_auth_hash(request, user)  # Actualizar la sesión para evitar desconexiones
+            messages.success(request, 'La contraseña se ha cambiado con éxito.')
+
+            logout(request)
+            return redirect('iniciar_sesion')
+
+    else:
+        cambiar_contraseña_form = CambiarContraseñaForm(request.user)
+
+    return render(request, 'configuraciones.html', {'usr': pasar_usuario(request), 'cambiar_contraseña_form': cambiar_contraseña_form})
