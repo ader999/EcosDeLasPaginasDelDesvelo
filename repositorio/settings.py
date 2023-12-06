@@ -19,7 +19,6 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -136,18 +135,36 @@ MEDIA_URL = '/static/media/'"""
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+
+
+# Configuración para usar Amazon S3 como backend de almacenamiento
+"""AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''"""
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'codeader'
+AWS_S3_REGION_NAME = 'us-east-1'  # Por ejemplo, 'us-east-1'
+
+# Configuración para servir archivos estáticos y de medios desde Amazon S3
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+# Configuración para almacenar archivos de medios en Amazon S3
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+
+
+
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
 
 if not DEBUG:
-    # Ruta en el sistema de archivos donde Django debe recolectar archivos estáticos
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    # Tell Django to copy statics to the `staticfiles` directory
+    # in your application directory on Render.
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-    # Configuración para archivos de medios
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = STATIC_ROOT / 'media'
-
-    # Turn on WhiteNoise storage backend
+    # Turn on WhiteNoise storage backend that takes care of compressing static files
+    # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
