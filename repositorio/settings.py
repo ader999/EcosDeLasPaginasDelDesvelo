@@ -82,6 +82,19 @@ WSGI_APPLICATION = 'repositorio.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
+
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'repositorio_1',
+            'USER': os.environ.get('RDS_USER'),
+            'PASSWORD': os.environ.get('RDS_PWS'),
+            'HOST': os.environ.get('RDS_HOST'),
+            'PORT': '5432',  # El puerto por defecto para PostgreSQL
+        }
+    }
+"""
 if 'USE_POSTGRESQL' in os.environ:
     DATABASES = {
         'default': dj_database_url.config(
@@ -95,7 +108,7 @@ else:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
-    }
+    }"""
 
 
 # Password validation
@@ -189,3 +202,6 @@ EMAIL_HOST_PASSWORD = 'vhzu xxxc qmdc cbdv'  # Contraseña de tu correo electró
 
 
 AUTH_USER_MODEL = 'repositorio.CustomUser'
+
+
+
