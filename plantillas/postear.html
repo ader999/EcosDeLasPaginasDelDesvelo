@@ -15,7 +15,19 @@
                 <div class="row">
                     <div class="col-md-4">
                         {% if post.image %}
-                       <img src="{{ AWS_S3_CUSTOM_DOMAIN }}{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+                        <img data-src="{{ AWS_S3_CUSTOM_DOMAIN }}{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid lazyload">
+                        <script>
+                          document.addEventListener("DOMContentLoaded", function() {
+                            var lazyloadImages = document.querySelectorAll(".lazyload");
+                            lazyloadImages.forEach(function(img) {
+                              img.setAttribute("src", img.getAttribute("data-src"));
+                            });
+
+                            // Agregar un mensaje de prueba
+                            console.log("Lazy loading script ejecutado correctamente.");
+                          });
+                        </script>
+
                         {% endif %}
                     </div>
                     <div class="col-md-8">

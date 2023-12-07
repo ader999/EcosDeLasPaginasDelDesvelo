@@ -80,11 +80,43 @@ TEMPLATES = [
 WSGI_APPLICATION = 'repositorio.wsgi.application'
 
 
-# Database
+#------------------------------ Database________________________________________
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+credentials = {}
+# Obtener la ruta completa al archivo config.txt
+config_file_path = os.path.join(os.path.dirname(__file__), 'config.txt')
 
-DATABASES = {
+# Verificar si el archivo de texto existe
+print(f"Ruta del archivo config.txt: {config_file_path}")
+if os.path.isfile(config_file_path):
+    # Leer las credenciales desde el archivo de texto
+    with open(config_file_path) as f:
+        for line in f:
+            # Dividir cada línea en clave y valor
+            key, value = map(str.strip, line.strip().split('='))
+
+            # Almacenar las credenciales en el diccionario
+            credentials[key] = value
+
+    # Imprimir información adicional
+    print(f"Credenciales leídas: {credentials}")
+
+    # Construir el diccionario DATABASES utilizando las credenciales
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'repositorio_1',
+            'USER': credentials.get('RDS_USER'),
+            'PASSWORD': credentials.get('RDS_PWS'),
+            'HOST': credentials.get('RDS_HOST'),
+            'PORT': '5432',  # El puerto por defecto para PostgreSQL
+        }
+    }
+
+elif 'RDS_USER' in os.environ:
+
+    DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'repositorio_1',
@@ -94,6 +126,11 @@ DATABASES = {
             'PORT': '5432',  # El puerto por defecto para PostgreSQL
         }
     }
+
+
+
+#------------------------------ END Database________________________________________
+
 """
 if 'USE_POSTGRESQL' in os.environ:
     DATABASES = {
@@ -194,11 +231,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configuarar correo
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # Configura el host SMTP adecuado
+EMAIL_HOST = os.environ.get('EMAIL_HOST')  # Configura el host SMTP adecuado
 EMAIL_PORT = 587  # Puerto para SMTP (587 para TLS, 465 para SSL)
 EMAIL_USE_TLS = True  # Habilitar TLS (o SSL si estás usando el puerto 465)
-EMAIL_HOST_USER = 'aderjasmirzeasrocha@gmail.com'  # Tu dirección de correo desde la que enviarás los mensajes
-EMAIL_HOST_PASSWORD = 'vhzu xxxc qmdc cbdv'  # Contraseña de tu correo electrónico
+EMAIL_HOST_USER =  os.environ.get('EMAIL_USER')  # Tu dirección de correo desde la que enviarás los mensajes
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PWS')  # Contraseña de tu correo electrónico
 
 
 AUTH_USER_MODEL = 'repositorio.CustomUser'

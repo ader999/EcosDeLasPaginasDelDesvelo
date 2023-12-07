@@ -23,7 +23,12 @@
             <ul class="list-group">
                 <li class="list-group-item mt-3" style="background-color: #f2f5f4; padding: 10px;">
                     <div class="d-flex align-items-center">
-                        <img src="{{ author.foto_perfil.url }}" alt="{{ user.username }} - Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;" class="mr-5 ">
+                        {% if author.foto_perfil %}
+                            <img src="{{ author.foto_perfil.url }}" alt="{{ user.username }} - Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;" class="mr-5 ">
+                        {% else %}
+                            <img src="{% static 'img/usuario.png' %}" alt="{{ user.username }} - Foto de perfil por defecto" style="width: 150px; height: 150px; border-radius: 50%;" class="mr-5 ">
+                        {% endif %}
+
                         <h2 class="display-5">{{ nombre_completo }} <strong>({{ author.username }})</strong></h2>
                     </div>
                 </li>
