@@ -188,11 +188,11 @@ MEDIA_URL = '/static/media/'"""
 
 
 # Configuración para usar Amazon S3 como backend de almacenamiento
-"""AWS_ACCESS_KEY_ID = ''
-AWS_SECRET_ACCESS_KEY = ''"""
+AWS_ACCESS_KEY_ID = 'AKIAWTKJKQQEH7EBSDES'
+AWS_SECRET_ACCESS_KEY = '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'
 
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+"""AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')"""
 AWS_STORAGE_BUCKET_NAME = 'codeader'
 AWS_S3_REGION_NAME = 'us-east-1'  # Por ejemplo, 'us-east-1'
 

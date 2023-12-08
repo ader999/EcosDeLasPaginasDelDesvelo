@@ -20,6 +20,7 @@ from django.contrib.auth import update_session_auth_hash
 from .forms import PostForm, RegistroForm, CambiarContraseñaForm
 from .models import Post, CustomUser
 from .utils import enviar_codigo_confirmacion
+
 User = get_user_model()
 
 def validar_correo_confirmado(view_func):

@@ -1,3 +1,7 @@
+import os
+from PIL import Image
+from io import BytesIO
+from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager, Permission
 
@@ -82,6 +86,44 @@ class Post(models.Model):
         # Asignar el usuario que ha iniciado sesión como autor solo si no se ha asignado previamente
         if not self.author_id:
             self.author = get_user_model().objects.get(pk=kwargs.get('user').pk)
+
+        # Comprimir la imagen antes de guardarla
+        if self.image:
+            img = Image.open(self.image)
+
+            # Comprueba el formato de la imagen
+            if img.format == 'JPEG':
+                # Comprime la imagen JPEG
+                output_io = BytesIO()
+                img.save(output_io, format='JPEG', quality=70)  # Puedes ajustar la calidad según tus necesidades
+            elif img.format == 'PNG':
+                # Comprime la imagen PNG
+                output_io = BytesIO()
+                img.save(output_io, format='PNG',
+                         optimize=True)  # Puedes ajustar otros parámetros según tus necesidades
+            else:
+                # Si es otro formato, simplemente guarda la imagen sin comprimir
+                output_io = BytesIO()
+                img.save(output_io, format=img.format)
+
+            # Comprueba si la imagen comprimida es más ligera que la original
+            if output_io.tell() < self.image.size:
+                # Sobrescribe la imagen original con la imagen comprimida
+                output_io.seek(0)
+                self.image = InMemoryUploadedFile(
+                    output_io,
+                    'ImageField',
+                    "%s.%s" % (os.path.splitext(os.path.basename(self.image.name))[0], img.format.lower()),
+                    'image/%s' % img.format.lower(),
+                    output_io.tell(),
+                    None
+                )
+                print(f'Compresión exitosa. Imagen original: {img.size} - Tamaño: {output_io.tell()} bytes')
+            else:
+                print('La compresión no se realizó porque la imagen comprimida es más pesada que la original.')
+
+
+
         super().save(*args, **kwargs)
 
 
