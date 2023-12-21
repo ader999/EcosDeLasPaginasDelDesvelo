@@ -11,7 +11,7 @@
 
 <div class="container mt-5 d-flex justify-content-center align-items-center">
     <ul class="list-group">
-        <li class="list-group-item mt-3" style="background-color: #f2f5f4; padding: 10px;">
+        <li class="list-group-item mt-3">
             <h2>Cambiar Foto de Perfil</h2>
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -22,7 +22,7 @@
                 <button type="submit" class="btn btn-primary save-btn">Guardar Cambios</button>
             </form>
         </li>
-        <li class="list-group-item mt-3" style="background-color: #f2f5f4; padding: 10px;">
+        <li class="list-group-item mt-3">
             <h2>Cambiar Contraseña</h2>
             <form method="post" action="{% url 'configuraciones' %}">
                 {% csrf_token %}

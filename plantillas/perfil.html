@@ -21,7 +21,7 @@
 
 
             <ul class="list-group">
-                <li class="list-group-item mt-3" style="background-color: #f2f5f4; padding: 10px;">
+                <li class="list-group-item mt-3" style=" padding: 10px;">
                     <div class="d-flex align-items-center">
                         <img src="{{ author.foto_perfil.url }}" alt="{{ user.username }} - Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;" class="mr-5 ">
                         <h2 class="display-5">{{ nombre_completo }} <strong>({{ author.username }})</strong></h2>
@@ -32,7 +32,7 @@
                 <h2>Publicaciones del autor</h2>
 
                 {% for post in posts %}
-                <li class="list-group-item mt-3" style="background-color: #f2f5f4;">
+                <li class="list-group-item mt-3">
                     <div class="row">
                         <div class="col-md-4">
                             {% if post.image %}

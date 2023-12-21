@@ -50,7 +50,8 @@ def inicio(request):
     # Definir el contexto con los posts paginados
     context = {
         'page': page,
-        'usr': pasar_usuario(request)
+        'usr': pasar_usuario(request),
+        'mostrar_fondo_oscuro': request.COOKIES.get('mostrar_fondo_oscuro', 'false') == 'true'
     }
 
     # Renderizar la plantilla y pasar el contexto
@@ -222,3 +223,15 @@ def configuraciones(request):
         cambiar_contraseña_form = CambiarContraseñaForm(request.user)
 
     return render(request, 'configuraciones.html', {'usr': pasar_usuario(request), 'cambiar_contraseña_form': cambiar_contraseña_form})
+
+
+def cambiar_fondo(request):
+    modo_actual = request.COOKIES.get('modo_fondo', 'modo_claro')
+
+    # Cambia el modo: si estaba en modo oscuro, cambia a modo claro, y viceversa
+    nuevo_modo = 'modo_claro' if modo_actual == 'modo_oscuro' else 'modo_oscuro'
+
+    response = redirect('inicio')
+    response.set_cookie('modo_fondo', nuevo_modo, expires=None)
+
+    return response

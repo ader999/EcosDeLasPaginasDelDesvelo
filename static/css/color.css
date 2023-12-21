@@ -1,0 +1,67 @@
+/* fondo_oscuro.css */
+:root {
+  --color-fondo-oscuro-barra: #eff1f4;
+  --color-fondo: #d6d8da;
+  --color-fuente: #262626 !important;
+}
+
+body {
+  background-color: var(--color-fondo); /* Utiliza var() para las variables */
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: var(--color-fondo-oscuro-barra); /* Utiliza var() para las variables */
+}
+
+/* Estilos para el pie de página */
+#page-footer {
+  background-color: var(--color-fondo-oscuro-barra) !important; /* Utiliza var() para las variables */
+  margin:0;
+  padding:0;
+  display: flex;
+}
+
+/* Estilos para los elementos de la barra de navegación */
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: var(--color-fuente) !important;
+}
+
+/* Estilos para los elementos en el pie de página */
+#page-footer p,
+#page-footer .btn {
+  color: var(--color-fuente) !important;
+}
+
+.list-group{
+  margin-bottom:40px;
+}
+
+.list-group-item{
+  background-color: var(--color-fondo-oscuro-barra);
+  color: var(--color-fuente);
+  border: none;
+  padding:20px;
+  border-radius: 30px;
+
+}
+ .display-3{
+  color: var(--color-fuente);
+}
+#p1 ,.card{
+  /*Color de los formularios*/
+  background-color: var(--color-fondo-oscuro-barra) !important;
+  color: var(--color-fuente);
+  border:none;
+}
+
+.modooscuro {
+  color: var(--color-fuente);
+  background-color: var(--color-fondo-oscuro-barra);
+  border: none;
+  font-size: 1.5em;
+}
+p, h1,h2{
+  color:var(--color-fuente) ;
+}

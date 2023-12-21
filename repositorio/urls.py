@@ -35,7 +35,7 @@ urlpatterns = [
     path('resultado_busqueda/', views.buscar_post, name='resultado_busqueda'),
     path('perfil/<str:username>/', views.perfil, name='perfil'),
     path('configuraciones/', views.configuraciones, name='configuraciones'),
-
+    path('cambair_fondo/', views.cambiar_fondo, name='cambiar_fondo'),
 
 ]
 
