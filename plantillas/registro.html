@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,3 +38,38 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-7">
+                <form method="post" class="card p-3" style="margin-bottom:50px">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary mt-3">Registrarse</button>
+                    {% if form.errors %}
+                        <div class="error-message">
+                            {{ form.errors }}
+                        </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
+>>>>>>> a8ca429b4755ad8adcd3a06b09a2b58b849f85e8

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,3 +32,28 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecos de las páginas del desvelo</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }} </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% include 'postear.html' %}
+    {% endblock %}
+</body>
+</html>
+>>>>>>> a8ca429b4755ad8adcd3a06b09a2b58b849f85e8
