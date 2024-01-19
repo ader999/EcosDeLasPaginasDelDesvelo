@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, Page
 from django.contrib.auth.decorators import login_required
@@ -472,5 +472,4 @@ def cambiar_fondo(request):
     response = redirect('inicio')
     response.set_cookie('modo_fondo', nuevo_modo, expires=None)
 
->>>>>>> a8ca429b4755ad8adcd3a06b09a2b58b849f85e8
     return response
