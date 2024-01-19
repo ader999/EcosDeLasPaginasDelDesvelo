@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 """
 Django settings for repositorio project.
 
@@ -486,4 +486,5 @@ AUTH_USER_MODEL = 'repositorio.CustomUser'
 
 
 
->>>>>>> a8ca429b4755ad8adcd3a06b09a2b58b849f85e8
+
+
