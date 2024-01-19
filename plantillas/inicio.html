@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-    <title>Ecos de las paginas del desvelo</title>
+    <title>Ecos de las páginas del desvelo</title>
 
 </head>
-<body >
-    {% extends 'base.html' %}
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
 
-    {% block content %}
+    <div id="content">
+        {% extends 'base.html' %}
 
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }} </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+        {% block content %}
 
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }} </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 
-
-
-    {% include 'postear.html' %}
-    {% endblock %}
-
-
-
+        {% include 'postear.html' %}
+        {% endblock %}
+    </div>
 
 </body>
 </html>
-
-<!--<a href="{% url 'blog:posts' %}"> Postes</a>-->
