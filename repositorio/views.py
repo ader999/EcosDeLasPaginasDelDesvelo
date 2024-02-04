@@ -267,6 +267,7 @@ def validar_correo_confirmado(view_func):
             custom_user = CustomUser.objects.get(username=request.user.username)
             if not custom_user.correo_confirmado:
                 return redirect("validar_codigo",)
+                return HttpResponseForbidden("Tu correo aún no ha sido confirmado.")
         return view_func(request, *args, **kwargs)
     return _wrapped_view
 

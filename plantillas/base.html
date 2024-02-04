@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="{% static 'css/trepar_documento.css' %}">
 
+
     {% if request.COOKIES.modo_fondo == 'modo_oscuro' %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/fondo_oscuro.css' %}">
     {% else %}
@@ -37,6 +38,8 @@
               <span >
                  <i id="menuIcono" class="fa-solid {% if request.COOKIES.modo_fondo == 'modo_oscuro' %}fa-bars{% else %}fa-bars {% endif %}" style="color: {% if request.COOKIES.modo_fondo == 'modo_oscuro' %}#ffffff{% else %}#000000{% endif %};"></i>
               </span>
+
+              <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -265,6 +268,7 @@
                 </div>
                 <div class="d-inline mx-2">
                     <a href="https://github.com/OverAder?tab=repositories" target="_blank" class="btn btn-secondary btn-lg">
+                    <a href="https://github.com/tu_usuario" target="_blank" class="btn btn-secondary btn-lg">
                         <i class="fab fa-github me-2"></i> GitHub
                     </a>
                 </div>

@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of a8ca429 (componiendo registro)
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of a8ca429 (componiendo registro)
 </head>
 <body>
     {% extends 'base.html' %}
@@ -12,8 +18,13 @@
 
     <div class="container mt-5">
     <div class="row justify-content-center">
+<<<<<<< HEAD
         <div class="col-md-6" style="margin-bottom:40px">
             <form method="post" enctype="multipart/form-data" class="p-4 border rounded bg-light" id="p1">
+=======
+        <div class="col-md-6">
+            <form method="post" enctype="multipart/form-data" class=" p-4 border rounded bg-light" id="p1">
+>>>>>>> parent of a8ca429 (componiendo registro)
                 {% csrf_token %}
                 <div class="form-group mb-3">
                     <label for="id_title">Título:</label>
@@ -39,6 +50,7 @@
                     <label for="id_video">Video:</label>
                     {{ form.video }}
                 </div>
+<<<<<<< HEAD
 
                 <div class="flex-container" >
                     <label for="id_categoria">Categoría:</label>
@@ -48,6 +60,14 @@
 
                 <div class="form-group mb-3">
                     <label for="id_categoria" style="display: block; margin-bottom: 5px;"></label>
+=======
+                <div class="form-group mb-3">
+                    <label for="id_categoria">Categoría:</label>
+                    {{ form.categoria }}
+                </div>
+                <div class="form-group mb-3">
+                    <label for="id_categoria"></label>
+>>>>>>> parent of a8ca429 (componiendo registro)
                     {{ form.author }}
                 </div>
 
@@ -63,6 +83,7 @@
 
     {% endblock %}
 </body>
+<<<<<<< HEAD
 =======
 <!DOCTYPE html>
 <html lang="en">
@@ -129,4 +150,6 @@
     {% endblock %}
 </body>
 >>>>>>> a8ca429b4755ad8adcd3a06b09a2b58b849f85e8
+=======
+>>>>>>> parent of a8ca429 (componiendo registro)
 </html>
