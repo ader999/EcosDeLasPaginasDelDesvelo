@@ -101,6 +101,8 @@ if os.path.isfile(config_file_path):
             # Almacenar las credenciales en el diccionario
             credentials[key] = value
 
+    # Imprimir información adicional
+    print(f"Credenciales leídas: {credentials}")
 
     # Construir el diccionario DATABASES utilizando las credenciales
     DATABASES = {
@@ -217,7 +219,6 @@ if not DEBUG:
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 
 

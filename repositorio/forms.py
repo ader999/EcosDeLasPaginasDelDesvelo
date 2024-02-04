@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
-from .models import CustomUser, Post,UsuarioManager
+from .models import CustomUser, Post
 from django.contrib.auth.forms import PasswordChangeForm
 
 
@@ -40,6 +40,7 @@ class RegistroForm(UserCreationForm):
             Post.objects.create(author=user, title="Primer post", content="Contenido del primer post")
 
         return user
+
 
 
 

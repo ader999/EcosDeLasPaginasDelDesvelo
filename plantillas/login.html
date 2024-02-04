@@ -9,7 +9,7 @@
     {% block content %}
 
     <div class="container mt-5" >
-    <div class="card p-3" style="max-width: 400px; margin: 0 auto;margin-bottom:50px; text-align: center;">
+    <div class="card p-3" style="max-width: 400px; margin: 0 auto; text-align: center; background-color: #f2f5f4;">
         <h2 class="text-center">Iniciar sesión</h2>
 
         {% if messages %}
@@ -20,7 +20,7 @@
             </div>
         {% endif %}
 
-        <form method="post" id="p2">
+        <form method="post">
             {% csrf_token %}
             <div class="form-group">
                 <label for="usuario">Usuario</label>
