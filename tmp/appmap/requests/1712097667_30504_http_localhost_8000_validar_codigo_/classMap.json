@@ -1,0 +1,109 @@
+[
+  {
+    "name": "repositorio",
+    "type": "package",
+    "children": [
+      {
+        "name": "views",
+        "type": "class",
+        "children": [
+          {
+            "name": "validar_codigo",
+            "type": "function",
+            "static": true,
+            "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:398"
+          }
+        ]
+      },
+      {
+        "name": "models",
+        "type": "package",
+        "children": [
+          {
+            "name": "CustomUser",
+            "type": "class",
+            "children": [
+              {
+                "name": "save",
+                "type": "function",
+                "static": false,
+                "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\models.py:53"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "django",
+    "type": "package",
+    "children": [
+      {
+        "name": "contrib",
+        "type": "package",
+        "children": [
+          {
+            "name": "auth",
+            "type": "package",
+            "children": [
+              {
+                "name": "backends",
+                "type": "package",
+                "children": [
+                  {
+                    "name": "ModelBackend",
+                    "type": "class",
+                    "children": [
+                      {
+                        "name": "user_can_authenticate",
+                        "type": "function",
+                        "labels": [
+                          "security.authorization"
+                        ],
+                        "static": false,
+                        "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\lib\\site-packages\\django\\contrib\\auth\\backends.py:55"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "POST /validar_codigo/"
+      }
+    ]
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "SELECT \"django_session\".\"session_key\", \"django_session\".\"session_data\", \"django_session\".\"expire_date\" FROM \"django_session\" WHERE (\"django_session\".\"expire_date\" > '2024-04-02T22:41:06.385234+00:00'::timestamptz AND \"django_session\".\"session_key\" = 'cohcdvkqjgwcyw3amf9kihgdskt9icun') LIMIT 21"
+      },
+      {
+        "type": "query",
+        "name": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"id\" = 1 LIMIT 21"
+      },
+      {
+        "type": "query",
+        "name": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"username\" = 'overader' LIMIT 21"
+      },
+      {
+        "type": "query",
+        "name": "UPDATE \"repositorio_customuser\" SET \"password\" = 'pbkdf2_sha256$600000$8ManwZm1hm0Y9OrR2QQMlZ$sjs61P/XIL2zjxdjdkqo81bRpx2uayhjsGz6jvGVb7A=', \"last_login\" = '2024-04-02T22:38:17.961624+00:00'::timestamptz, \"is_superuser\" = true, \"first_name\" = '', \"last_name\" = '', \"is_staff\" = true, \"is_active\" = true, \"date_joined\" = '2023-12-07T03:03:32+00:00'::timestamptz, \"username\" = 'overader', \"nombre\" = 'Ader Yasmir', \"apellidos\" = 'Zeas Rocha', \"email\" = 'aderjasmirzeasrocha@gmail.com', \"foto_perfil\" = 'fotos_perfil/Imagen_de_WhatsApp_2023-10-17_a_las_20.52.11_dfaa4ad8-fotor-20231017212358.jpg', \"usuario_activo\" = true, \"usuario_administrador\" = false, \"codigo_confirmacion\" = '', \"correo_confirmado\" = true WHERE \"repositorio_customuser\".\"id\" = 1"
+      }
+    ]
+  }
+]

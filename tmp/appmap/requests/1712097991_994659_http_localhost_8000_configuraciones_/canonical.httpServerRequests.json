@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /configuraciones/",
+    "parameters": "()",
+    "status": 200
+  }
+]

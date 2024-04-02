@@ -1,0 +1,28 @@
+{
+  "language": {
+    "name": "python",
+    "engine": "CPython",
+    "version": "3.10.11"
+  },
+  "client": {
+    "name": "appmap",
+    "url": "https://github.com/applandinc/appmap-python"
+  },
+  "git": {
+    "repository": "https://github.com/ader999/EcosDeLasPaginasDelDesvelo.git",
+    "branch": "main",
+    "commit": "2823c856978ad1fa2f45b52c568086dcf8b4d132"
+  },
+  "frameworks": [
+    {
+      "name": "Django",
+      "version": "4.2.3"
+    }
+  ],
+  "name": "POST /login/ (302) - 16:41:33.392",
+  "timestamp": 1712097693.392668,
+  "recorder": {
+    "name": "record_requests",
+    "type": "requests"
+  }
+}

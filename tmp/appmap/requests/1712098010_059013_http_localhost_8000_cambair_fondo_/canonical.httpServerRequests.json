@@ -1,0 +1,7 @@
+[
+  {
+    "route": "POST /cambair_fondo/",
+    "parameters": "(csrfmiddlewaretoken)",
+    "status": 302
+  }
+]

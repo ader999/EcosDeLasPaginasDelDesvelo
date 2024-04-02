@@ -1,0 +1,61 @@
+[
+  {
+    "name": "repositorio",
+    "type": "package",
+    "children": [
+      {
+        "name": "views",
+        "type": "class",
+        "children": [
+          {
+            "name": "inicio",
+            "type": "function",
+            "static": true,
+            "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:277"
+          },
+          {
+            "name": "pasar_usuario",
+            "type": "function",
+            "static": true,
+            "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:273"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /"
+      }
+    ]
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "SELECT COUNT(*) AS \"__count\" FROM \"repositorio_post\""
+      },
+      {
+        "type": "query",
+        "name": "SELECT \"repositorio_post\".\"id\", \"repositorio_post\".\"title\", \"repositorio_post\".\"content\", \"repositorio_post\".\"image\", \"repositorio_post\".\"pdf_file\", \"repositorio_post\".\"video\", \"repositorio_post\".\"fecha_de_publicacion\", \"repositorio_post\".\"author_id\", \"repositorio_post\".\"categoria\" FROM \"repositorio_post\" ORDER BY \"repositorio_post\".\"fecha_de_publicacion\" DESC LIMIT 21"
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "<templates>/UnknownSource",
+    "children": [
+      {
+        "type": "function",
+        "name": "render",
+        "static": false
+      }
+    ]
+  }
+]

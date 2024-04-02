@@ -1,0 +1,18 @@
+[
+  {
+    "caller": "HTTP server requests",
+    "callee": "repositorio"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasValidar_CodigoHtml"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "Database"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "django"
+  }
+]

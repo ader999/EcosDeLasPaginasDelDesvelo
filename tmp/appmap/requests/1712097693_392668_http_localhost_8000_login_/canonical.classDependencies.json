@@ -1,0 +1,30 @@
+[
+  {
+    "caller": "POST /login/",
+    "callee": "UPDATE \"django_session\" SET \"session_data\" = '.eJxVjMsOwiAQRf-FtSG8YVy69xsIDINUDU1KuzL-uzbpQrf3nHNfLKZtbXEbtMSpsDOT7PS75YQP6jso99RvM8e5r8uU-a7wgw5-nQs9L4f7d9DSaN_aKyuhGm1IBl1FLkkUTQQmEzpMwpYsRVAKlFTBYQ0Sq_baO7AGKgJ7fwDZ2Dd8:1rrmov:1amIXSpVPb4pXmCBAUfPi-wLEuyl71f_38ita7haitc', \"expire_date\" = '2024-04-16T22:41:33.144154+00:00'::timestamptz WHERE \"django_session\".\"session_key\" = 'cohcdvkqjgwcyw3amf9kihgdskt9icun'"
+  },
+  {
+    "caller": "POST /login/",
+    "callee": "repositorio/views"
+  },
+  {
+    "caller": "django/contrib",
+    "callee": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"username\" = 'overader' LIMIT 21"
+  },
+  {
+    "caller": "repositorio/models",
+    "callee": "UPDATE \"repositorio_customuser\" SET \"last_login\" = '2024-04-02T22:41:33.061939+00:00'::timestamptz WHERE \"repositorio_customuser\".\"id\" = 1"
+  },
+  {
+    "caller": "repositorio/views",
+    "callee": "SELECT \"django_session\".\"session_key\", \"django_session\".\"session_data\", \"django_session\".\"expire_date\" FROM \"django_session\" WHERE (\"django_session\".\"expire_date\" > '2024-04-02T22:41:32.981941+00:00'::timestamptz AND \"django_session\".\"session_key\" = 'cohcdvkqjgwcyw3amf9kihgdskt9icun') LIMIT 21"
+  },
+  {
+    "caller": "repositorio/views",
+    "callee": "django/contrib"
+  },
+  {
+    "caller": "repositorio/views",
+    "callee": "repositorio/models"
+  }
+]

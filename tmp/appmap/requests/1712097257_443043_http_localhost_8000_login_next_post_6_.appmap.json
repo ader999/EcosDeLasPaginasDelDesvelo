@@ -1,0 +1,187 @@
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "GET",
+        "protocol": "HTTP/1.1",
+        "path_info": "/login/",
+        "normalized_path_info": "/login/",
+        "mime_type": "text/plain",
+        "headers": {
+          "Content-Length": "",
+          "Content-Type": "text/plain",
+          "Host": "localhost:8000",
+          "Connection": "keep-alive",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+          "Sec-Gpc": "1",
+          "Sec-Fetch-Site": "same-origin",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-User": "?1",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Ch-Ua": "\"Brave\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\"Windows\"",
+          "Accept-Language": "es-ES,es",
+          "Referer": "http://localhost:8000/",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Cookie": "csrftoken=X7rgLEfkWk9CknL0olaC2UdcYy2tLOyE"
+        }
+      },
+      "message": [
+        {
+          "object_id": 1854262723952,
+          "value": "'/post/6/'",
+          "name": "next",
+          "class": "builtins.str"
+        }
+      ],
+      "id": 1,
+      "event": "call",
+      "thread_id": 9
+    },
+    {
+      "static": true,
+      "parameters": [
+        {
+          "kind": "req",
+          "object_id": 1854275323936,
+          "value": "<WSGIRequest: GET '/login/?next=/post/6/'>",
+          "name": "request",
+          "class": "django.core.handlers.wsgi.WSGIRequest"
+        }
+      ],
+      "id": 2,
+      "event": "call",
+      "thread_id": 9,
+      "defined_class": "repositorio.views",
+      "method_id": "iniciar_sesion",
+      "path": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py",
+      "lineno": 351
+    },
+    {
+      "receiver": {
+        "object_id": 1854272869120,
+        "value": "<Template template_string=\"<!DOCTYPE html><htm...\">",
+        "class": "django.template.base.Template"
+      },
+      "path": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\plantillas\\login.html",
+      "id": 3,
+      "event": "call",
+      "thread_id": 9,
+      "defined_class": "<templates>.CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasLoginHtml",
+      "method_id": "render",
+      "static": false
+    },
+    {
+      "parent_id": 3,
+      "elapsed": 0.015000000013969839,
+      "id": 4,
+      "event": "return",
+      "thread_id": 9
+    },
+    {
+      "return_value": {
+        "object_id": 1854272867920,
+        "value": "<HttpResponse status_code=200, \"text/html; charset=utf-8\">",
+        "class": "django.http.response.HttpResponse"
+      },
+      "parent_id": 2,
+      "elapsed": 0.006082296371459961,
+      "id": 5,
+      "event": "return",
+      "thread_id": 9
+    },
+    {
+      "http_server_response": {
+        "status_code": 200,
+        "mime_type": "text/html; charset=utf-8",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "X-Frame-Options": "DENY",
+          "Vary": "Cookie",
+          "Content-Length": "5638",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.015000000013969839,
+      "id": 6,
+      "event": "return",
+      "thread_id": 9
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.10.11"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "https://github.com/ader999/EcosDeLasPaginasDelDesvelo.git",
+      "branch": "main",
+      "commit": "2823c856978ad1fa2f45b52c568086dcf8b4d132"
+    },
+    "frameworks": [
+      {
+        "name": "Django",
+        "version": "4.2.3"
+      }
+    ],
+    "name": "GET /login/ (200) - 16:34:17.443",
+    "timestamp": 1712097257.443043,
+    "recorder": {
+      "name": "record_requests",
+      "type": "requests"
+    }
+  },
+  "classMap": [
+    {
+      "name": "repositorio",
+      "type": "package",
+      "children": [
+        {
+          "name": "views",
+          "type": "class",
+          "children": [
+            {
+              "name": "iniciar_sesion",
+              "type": "function",
+              "static": true,
+              "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:351"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /login/"
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasLoginHtml",
+      "children": [
+        {
+          "type": "function",
+          "name": "render",
+          "static": false
+        }
+      ]
+    }
+  ]
+}

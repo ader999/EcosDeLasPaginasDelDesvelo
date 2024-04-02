@@ -235,7 +235,6 @@ def cambiar_fondo(request):
     response = redirect('inicio')
     response.set_cookie('modo_fondo', nuevo_modo, expires=None)
 
-=======
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, Page
 from django.contrib.auth.decorators import login_required

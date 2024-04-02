@@ -1,0 +1,5 @@
+[
+  "django/contrib/auth/backends/ModelBackend",
+  "repositorio/models/CustomUser",
+  "repositorio/views"
+]

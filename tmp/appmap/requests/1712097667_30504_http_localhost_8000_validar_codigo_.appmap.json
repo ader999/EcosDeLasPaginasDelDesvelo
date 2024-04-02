@@ -1,0 +1,395 @@
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "POST",
+        "protocol": "HTTP/1.1",
+        "path_info": "/validar_codigo/",
+        "normalized_path_info": "/validar_codigo/",
+        "mime_type": "application/x-www-form-urlencoded",
+        "headers": {
+          "Content-Length": "92",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Host": "localhost:8000",
+          "Connection": "keep-alive",
+          "Cache-Control": "max-age=0",
+          "Sec-Ch-Ua": "\"Brave\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\"Windows\"",
+          "Upgrade-Insecure-Requests": "1",
+          "Origin": "http://localhost:8000",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+          "Sec-Gpc": "1",
+          "Accept-Language": "es-ES,es",
+          "Sec-Fetch-Site": "same-origin",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-User": "?1",
+          "Sec-Fetch-Dest": "document",
+          "Referer": "http://localhost:8000/validar_codigo/",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Cookie": "csrftoken=ihWmcOAy7lFA3vrSe8KAGa4NI83gFKh5; sessionid=cohcdvkqjgwcyw3amf9kihgdskt9icun"
+        }
+      },
+      "message": [
+        {
+          "object_id": 1377440238768,
+          "value": "'Vs0LuZkvAel8ayuaynLSqehWdRHNTDub3zMXwDKTxpQy3TLSClliWebzLPATodB6'",
+          "name": "csrfmiddlewaretoken",
+          "class": "builtins.str"
+        },
+        {
+          "object_id": 1377379582000,
+          "value": "''",
+          "name": "codigo",
+          "class": "builtins.str"
+        }
+      ],
+      "id": 1,
+      "event": "call",
+      "thread_id": 6
+    },
+    {
+      "static": true,
+      "parameters": [
+        {
+          "kind": "req",
+          "object_id": 1377443151984,
+          "value": "<WSGIRequest: POST '/validar_codigo/'>",
+          "name": "request",
+          "class": "django.core.handlers.wsgi.WSGIRequest"
+        }
+      ],
+      "id": 2,
+      "event": "call",
+      "thread_id": 6,
+      "defined_class": "repositorio.views",
+      "method_id": "validar_codigo",
+      "path": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py",
+      "lineno": 398
+    },
+    {
+      "sql_query": {
+        "sql": "SELECT \"django_session\".\"session_key\", \"django_session\".\"session_data\", \"django_session\".\"expire_date\" FROM \"django_session\" WHERE (\"django_session\".\"expire_date\" > '2024-04-02T22:41:06.385234+00:00'::timestamptz AND \"django_session\".\"session_key\" = 'cohcdvkqjgwcyw3amf9kihgdskt9icun') LIMIT 21",
+        "database_type": "postgresql",
+        "server_version": "15.0.5"
+      },
+      "id": 3,
+      "event": "call",
+      "thread_id": 6
+    },
+    {
+      "parent_id": 3,
+      "elapsed": 0.0629999999946449,
+      "id": 4,
+      "event": "return",
+      "thread_id": 6
+    },
+    {
+      "sql_query": {
+        "sql": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"id\" = 1 LIMIT 21",
+        "database_type": "postgresql",
+        "server_version": "15.0.5"
+      },
+      "id": 5,
+      "event": "call",
+      "thread_id": 6
+    },
+    {
+      "parent_id": 5,
+      "elapsed": 0.0779999999795109,
+      "id": 6,
+      "event": "return",
+      "thread_id": 6
+    },
+    {
+      "static": false,
+      "receiver": {
+        "kind": "req",
+        "object_id": 1377449443536,
+        "value": "<django.contrib.auth.backends.ModelBackend object at 0x00000140B66280D0>",
+        "name": "self",
+        "class": "django.contrib.auth.backends.ModelBackend"
+      },
+      "parameters": [
+        {
+          "kind": "req",
+          "object_id": 1377441178880,
+          "value": "<CustomUser: Ader Yasmir, Zeas Rocha>",
+          "name": "user",
+          "class": "repositorio.models.CustomUser"
+        }
+      ],
+      "id": 7,
+      "event": "call",
+      "thread_id": 6,
+      "defined_class": "django.contrib.auth.backends.ModelBackend",
+      "method_id": "user_can_authenticate",
+      "path": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\lib\\site-packages\\django\\contrib\\auth\\backends.py",
+      "lineno": 55
+    },
+    {
+      "return_value": {
+        "object_id": 140709719825256,
+        "value": "True",
+        "class": "builtins.bool"
+      },
+      "parent_id": 7,
+      "elapsed": 0,
+      "id": 8,
+      "event": "return",
+      "thread_id": 6
+    },
+    {
+      "sql_query": {
+        "sql": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"username\" = 'overader' LIMIT 21",
+        "database_type": "postgresql",
+        "server_version": "15.0.5"
+      },
+      "id": 9,
+      "event": "call",
+      "thread_id": 6
+    },
+    {
+      "parent_id": 9,
+      "elapsed": 0.07800000000861473,
+      "id": 10,
+      "event": "return",
+      "thread_id": 6
+    },
+    {
+      "static": false,
+      "receiver": {
+        "kind": "req",
+        "object_id": 1377441174704,
+        "value": "<CustomUser: Ader Yasmir, Zeas Rocha>",
+        "name": "self",
+        "class": "repositorio.models.CustomUser"
+      },
+      "parameters": [
+        {
+          "kind": "rest",
+          "object_id": 1377379565680,
+          "value": "()",
+          "name": "args",
+          "class": "builtins.tuple"
+        },
+        {
+          "kind": "keyrest",
+          "object_id": 1377441980992,
+          "value": "{}",
+          "name": "kwargs",
+          "class": "builtins.dict",
+          "size": 0
+        }
+      ],
+      "id": 11,
+      "event": "call",
+      "thread_id": 6,
+      "defined_class": "repositorio.models.CustomUser",
+      "method_id": "save",
+      "path": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\models.py",
+      "lineno": 53
+    },
+    {
+      "sql_query": {
+        "sql": "UPDATE \"repositorio_customuser\" SET \"password\" = 'pbkdf2_sha256$600000$8ManwZm1hm0Y9OrR2QQMlZ$sjs61P/XIL2zjxdjdkqo81bRpx2uayhjsGz6jvGVb7A=', \"last_login\" = '2024-04-02T22:38:17.961624+00:00'::timestamptz, \"is_superuser\" = true, \"first_name\" = '', \"last_name\" = '', \"is_staff\" = true, \"is_active\" = true, \"date_joined\" = '2023-12-07T03:03:32+00:00'::timestamptz, \"username\" = 'overader', \"nombre\" = 'Ader Yasmir', \"apellidos\" = 'Zeas Rocha', \"email\" = 'aderjasmirzeasrocha@gmail.com', \"foto_perfil\" = 'fotos_perfil/Imagen_de_WhatsApp_2023-10-17_a_las_20.52.11_dfaa4ad8-fotor-20231017212358.jpg', \"usuario_activo\" = true, \"usuario_administrador\" = false, \"codigo_confirmacion\" = '', \"correo_confirmado\" = true WHERE \"repositorio_customuser\".\"id\" = 1",
+        "database_type": "postgresql",
+        "server_version": "15.0.5"
+      },
+      "id": 12,
+      "event": "call",
+      "thread_id": 6
+    },
+    {
+      "parent_id": 12,
+      "elapsed": 0.07899999999790452,
+      "id": 13,
+      "event": "return",
+      "thread_id": 6
+    },
+    {
+      "return_value": {
+        "object_id": 140709719877624,
+        "value": "None",
+        "class": "builtins.NoneType"
+      },
+      "parent_id": 11,
+      "elapsed": 0.09031009674072266,
+      "id": 14,
+      "event": "return",
+      "thread_id": 6
+    },
+    {
+      "return_value": {
+        "object_id": 1377442146208,
+        "value": "<HttpResponseRedirect status_code=302, \"text/html; charset=utf-8\", url=\"/\">",
+        "class": "django.http.response.HttpResponseRedirect"
+      },
+      "parent_id": 2,
+      "elapsed": 0.9188284873962402,
+      "id": 15,
+      "event": "return",
+      "thread_id": 6
+    },
+    {
+      "http_server_response": {
+        "status_code": 302,
+        "mime_type": "text/html; charset=utf-8",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Location": "/",
+          "X-Frame-Options": "DENY",
+          "Content-Length": "0",
+          "Vary": "Cookie",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.9219999999913853,
+      "id": 16,
+      "event": "return",
+      "thread_id": 6
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.10.11"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "https://github.com/ader999/EcosDeLasPaginasDelDesvelo.git",
+      "branch": "main",
+      "commit": "2823c856978ad1fa2f45b52c568086dcf8b4d132"
+    },
+    "frameworks": [
+      {
+        "name": "Django",
+        "version": "4.2.3"
+      }
+    ],
+    "name": "POST /validar_codigo/ (302) - 16:41:07.305",
+    "timestamp": 1712097667.30504,
+    "recorder": {
+      "name": "record_requests",
+      "type": "requests"
+    }
+  },
+  "classMap": [
+    {
+      "name": "repositorio",
+      "type": "package",
+      "children": [
+        {
+          "name": "views",
+          "type": "class",
+          "children": [
+            {
+              "name": "validar_codigo",
+              "type": "function",
+              "static": true,
+              "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:398"
+            }
+          ]
+        },
+        {
+          "name": "models",
+          "type": "package",
+          "children": [
+            {
+              "name": "CustomUser",
+              "type": "class",
+              "children": [
+                {
+                  "name": "save",
+                  "type": "function",
+                  "static": false,
+                  "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\models.py:53"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "django",
+      "type": "package",
+      "children": [
+        {
+          "name": "contrib",
+          "type": "package",
+          "children": [
+            {
+              "name": "auth",
+              "type": "package",
+              "children": [
+                {
+                  "name": "backends",
+                  "type": "package",
+                  "children": [
+                    {
+                      "name": "ModelBackend",
+                      "type": "class",
+                      "children": [
+                        {
+                          "name": "user_can_authenticate",
+                          "type": "function",
+                          "labels": [
+                            "security.authorization"
+                          ],
+                          "static": false,
+                          "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\lib\\site-packages\\django\\contrib\\auth\\backends.py:55"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /validar_codigo/"
+        }
+      ]
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "SELECT \"django_session\".\"session_key\", \"django_session\".\"session_data\", \"django_session\".\"expire_date\" FROM \"django_session\" WHERE (\"django_session\".\"expire_date\" > '2024-04-02T22:41:06.385234+00:00'::timestamptz AND \"django_session\".\"session_key\" = 'cohcdvkqjgwcyw3amf9kihgdskt9icun') LIMIT 21"
+        },
+        {
+          "type": "query",
+          "name": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"id\" = 1 LIMIT 21"
+        },
+        {
+          "type": "query",
+          "name": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"username\" = 'overader' LIMIT 21"
+        },
+        {
+          "type": "query",
+          "name": "UPDATE \"repositorio_customuser\" SET \"password\" = 'pbkdf2_sha256$600000$8ManwZm1hm0Y9OrR2QQMlZ$sjs61P/XIL2zjxdjdkqo81bRpx2uayhjsGz6jvGVb7A=', \"last_login\" = '2024-04-02T22:38:17.961624+00:00'::timestamptz, \"is_superuser\" = true, \"first_name\" = '', \"last_name\" = '', \"is_staff\" = true, \"is_active\" = true, \"date_joined\" = '2023-12-07T03:03:32+00:00'::timestamptz, \"username\" = 'overader', \"nombre\" = 'Ader Yasmir', \"apellidos\" = 'Zeas Rocha', \"email\" = 'aderjasmirzeasrocha@gmail.com', \"foto_perfil\" = 'fotos_perfil/Imagen_de_WhatsApp_2023-10-17_a_las_20.52.11_dfaa4ad8-fotor-20231017212358.jpg', \"usuario_activo\" = true, \"usuario_administrador\" = false, \"codigo_confirmacion\" = '', \"correo_confirmado\" = true WHERE \"repositorio_customuser\".\"id\" = 1"
+        }
+      ]
+    }
+  ]
+}

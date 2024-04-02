@@ -1,0 +1,22 @@
+[
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasDetalle_PostHtml",
+    "callee": "Database"
+  },
+  {
+    "caller": "HTTP server requests",
+    "callee": "repositorio"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasDetalle_PostHtml"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "Database"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "django"
+  }
+]

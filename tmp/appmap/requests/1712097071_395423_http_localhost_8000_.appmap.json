@@ -1,0 +1,266 @@
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "GET",
+        "protocol": "HTTP/1.1",
+        "path_info": "/",
+        "normalized_path_info": "/",
+        "mime_type": "text/plain",
+        "headers": {
+          "Content-Length": "",
+          "Content-Type": "text/plain",
+          "Host": "localhost:8000",
+          "Connection": "keep-alive",
+          "Cache-Control": "max-age=0",
+          "Sec-Ch-Ua": "\"Brave\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\"Windows\"",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+          "Sec-Gpc": "1",
+          "Accept-Language": "es-ES,es",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-User": "?1",
+          "Sec-Fetch-Dest": "document",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Cookie": "csrftoken=X7rgLEfkWk9CknL0olaC2UdcYy2tLOyE"
+        }
+      },
+      "id": 1,
+      "event": "call",
+      "thread_id": 4
+    },
+    {
+      "static": true,
+      "parameters": [
+        {
+          "kind": "req",
+          "object_id": 1854259992592,
+          "value": "<WSGIRequest: GET '/'>",
+          "name": "request",
+          "class": "django.core.handlers.wsgi.WSGIRequest"
+        }
+      ],
+      "id": 2,
+      "event": "call",
+      "thread_id": 4,
+      "defined_class": "repositorio.views",
+      "method_id": "inicio",
+      "path": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py",
+      "lineno": 277
+    },
+    {
+      "sql_query": {
+        "sql": "SELECT COUNT(*) AS \"__count\" FROM \"repositorio_post\"",
+        "database_type": "postgresql",
+        "server_version": "15.0.5"
+      },
+      "id": 3,
+      "event": "call",
+      "thread_id": 4
+    },
+    {
+      "parent_id": 3,
+      "elapsed": 0.07800000000861473,
+      "id": 4,
+      "event": "return",
+      "thread_id": 4
+    },
+    {
+      "static": true,
+      "parameters": [
+        {
+          "kind": "req",
+          "object_id": 1854259992592,
+          "value": "<WSGIRequest: GET '/'>",
+          "name": "request",
+          "class": "django.core.handlers.wsgi.WSGIRequest"
+        }
+      ],
+      "id": 5,
+      "event": "call",
+      "thread_id": 4,
+      "defined_class": "repositorio.views",
+      "method_id": "pasar_usuario",
+      "path": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py",
+      "lineno": 273
+    },
+    {
+      "return_value": {
+        "object_id": 1854200840240,
+        "value": "''",
+        "class": "builtins.str"
+      },
+      "parent_id": 5,
+      "elapsed": 0,
+      "id": 6,
+      "event": "return",
+      "thread_id": 4
+    },
+    {
+      "exceptions": [
+        {
+          "class": "django.template.exceptions.TemplateSyntaxError",
+          "message": "'block' tag with name 'content' appears more than once",
+          "object_id": 1854263465472
+        }
+      ],
+      "parent_id": 2,
+      "elapsed": 3.486933946609497,
+      "id": 7,
+      "event": "return",
+      "thread_id": 4
+    },
+    {
+      "sql_query": {
+        "sql": "SELECT \"repositorio_post\".\"id\", \"repositorio_post\".\"title\", \"repositorio_post\".\"content\", \"repositorio_post\".\"image\", \"repositorio_post\".\"pdf_file\", \"repositorio_post\".\"video\", \"repositorio_post\".\"fecha_de_publicacion\", \"repositorio_post\".\"author_id\", \"repositorio_post\".\"categoria\" FROM \"repositorio_post\" ORDER BY \"repositorio_post\".\"fecha_de_publicacion\" DESC LIMIT 21",
+        "database_type": "postgresql",
+        "server_version": "15.0.5"
+      },
+      "id": 8,
+      "event": "call",
+      "thread_id": 4
+    },
+    {
+      "parent_id": 8,
+      "elapsed": 0.360000000015134,
+      "id": 9,
+      "event": "return",
+      "thread_id": 4
+    },
+    {
+      "receiver": {
+        "object_id": 1854259986832,
+        "value": "<Template template_string=\"<!DOCTYPE html><htm...\">",
+        "class": "django.template.base.Template"
+      },
+      "path": "<unknown source>",
+      "id": 10,
+      "event": "call",
+      "thread_id": 4,
+      "defined_class": "<templates>.UnknownSource",
+      "method_id": "render",
+      "static": false
+    },
+    {
+      "parent_id": 10,
+      "elapsed": 0.03200000000651926,
+      "id": 11,
+      "event": "return",
+      "thread_id": 4
+    },
+    {
+      "http_server_response": {
+        "status_code": 500,
+        "mime_type": "text/html; charset=utf-8",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "X-Frame-Options": "DENY",
+          "Content-Length": "199108",
+          "Vary": "Cookie",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 3.9219999999913853,
+      "id": 12,
+      "event": "return",
+      "thread_id": 4
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.10.11"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "https://github.com/ader999/EcosDeLasPaginasDelDesvelo.git",
+      "branch": "main",
+      "commit": "2823c856978ad1fa2f45b52c568086dcf8b4d132"
+    },
+    "frameworks": [
+      {
+        "name": "Django",
+        "version": "4.2.3"
+      }
+    ],
+    "name": "GET / (500) - 16:31:11.395",
+    "timestamp": 1712097071.395423,
+    "recorder": {
+      "name": "record_requests",
+      "type": "requests"
+    }
+  },
+  "classMap": [
+    {
+      "name": "repositorio",
+      "type": "package",
+      "children": [
+        {
+          "name": "views",
+          "type": "class",
+          "children": [
+            {
+              "name": "inicio",
+              "type": "function",
+              "static": true,
+              "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:277"
+            },
+            {
+              "name": "pasar_usuario",
+              "type": "function",
+              "static": true,
+              "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:273"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /"
+        }
+      ]
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "SELECT COUNT(*) AS \"__count\" FROM \"repositorio_post\""
+        },
+        {
+          "type": "query",
+          "name": "SELECT \"repositorio_post\".\"id\", \"repositorio_post\".\"title\", \"repositorio_post\".\"content\", \"repositorio_post\".\"image\", \"repositorio_post\".\"pdf_file\", \"repositorio_post\".\"video\", \"repositorio_post\".\"fecha_de_publicacion\", \"repositorio_post\".\"author_id\", \"repositorio_post\".\"categoria\" FROM \"repositorio_post\" ORDER BY \"repositorio_post\".\"fecha_de_publicacion\" DESC LIMIT 21"
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "<templates>/UnknownSource",
+      "children": [
+        {
+          "type": "function",
+          "name": "render",
+          "static": false
+        }
+      ]
+    }
+  ]
+}

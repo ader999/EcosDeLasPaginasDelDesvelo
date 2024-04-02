@@ -1,0 +1,10 @@
+[
+  {
+    "caller": "GET /login/",
+    "callee": "repositorio/views"
+  },
+  {
+    "caller": "repositorio/views",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasLoginHtml#render"
+  }
+]

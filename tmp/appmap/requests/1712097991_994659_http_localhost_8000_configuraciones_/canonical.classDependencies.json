@@ -1,0 +1,58 @@
+[
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsErrorsListDefaultHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsErrorsListUlHtml#render"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsLabelHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsAttrsHtml#render"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsPHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsErrorsListDefaultHtml#render"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsPHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsLabelHtml#render"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsPHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsPasswordHtml#render"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsInputHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsAttrsHtml#render"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsPasswordHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsInputHtml#render"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasConfiguracionesHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsErrorsListDefaultHtml#render"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasConfiguracionesHtml#render",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsPHtml#render"
+  },
+  {
+    "caller": "GET /configuraciones/",
+    "callee": "repositorio/views"
+  },
+  {
+    "caller": "repositorio/views",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasConfiguracionesHtml#render"
+  },
+  {
+    "caller": "repositorio/views",
+    "callee": "SELECT \"django_session\".\"session_key\", \"django_session\".\"session_data\", \"django_session\".\"expire_date\" FROM \"django_session\" WHERE (\"django_session\".\"expire_date\" > '2024-04-02T22:46:30.879834+00:00'::timestamptz AND \"django_session\".\"session_key\" = 'cohcdvkqjgwcyw3amf9kihgdskt9icun') LIMIT 21"
+  },
+  {
+    "caller": "repositorio/views",
+    "callee": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"id\" = 1 LIMIT 21"
+  },
+  {
+    "caller": "repositorio/views",
+    "callee": "django/contrib"
+  }
+]

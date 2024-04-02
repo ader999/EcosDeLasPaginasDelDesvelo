@@ -1,0 +1,119 @@
+[
+  {
+    "name": "repositorio",
+    "type": "package",
+    "children": [
+      {
+        "name": "views",
+        "type": "class",
+        "children": [
+          {
+            "name": "inicio",
+            "type": "function",
+            "static": true,
+            "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:277"
+          },
+          {
+            "name": "pasar_usuario",
+            "type": "function",
+            "static": true,
+            "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py:273"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "django",
+    "type": "package",
+    "children": [
+      {
+        "name": "contrib",
+        "type": "package",
+        "children": [
+          {
+            "name": "auth",
+            "type": "package",
+            "children": [
+              {
+                "name": "backends",
+                "type": "package",
+                "children": [
+                  {
+                    "name": "ModelBackend",
+                    "type": "class",
+                    "children": [
+                      {
+                        "name": "user_can_authenticate",
+                        "type": "function",
+                        "labels": [
+                          "security.authorization"
+                        ],
+                        "static": false,
+                        "location": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\lib\\site-packages\\django\\contrib\\auth\\backends.py:55"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /"
+      }
+    ]
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "SELECT COUNT(*) AS \"__count\" FROM \"repositorio_post\""
+      },
+      {
+        "type": "query",
+        "name": "SELECT \"django_session\".\"session_key\", \"django_session\".\"session_data\", \"django_session\".\"expire_date\" FROM \"django_session\" WHERE (\"django_session\".\"expire_date\" > '2024-04-02T22:38:19.426351+00:00'::timestamptz AND \"django_session\".\"session_key\" = 'cohcdvkqjgwcyw3amf9kihgdskt9icun') LIMIT 21"
+      },
+      {
+        "type": "query",
+        "name": "SELECT \"repositorio_customuser\".\"id\", \"repositorio_customuser\".\"password\", \"repositorio_customuser\".\"last_login\", \"repositorio_customuser\".\"is_superuser\", \"repositorio_customuser\".\"first_name\", \"repositorio_customuser\".\"last_name\", \"repositorio_customuser\".\"is_staff\", \"repositorio_customuser\".\"is_active\", \"repositorio_customuser\".\"date_joined\", \"repositorio_customuser\".\"username\", \"repositorio_customuser\".\"nombre\", \"repositorio_customuser\".\"apellidos\", \"repositorio_customuser\".\"email\", \"repositorio_customuser\".\"foto_perfil\", \"repositorio_customuser\".\"usuario_activo\", \"repositorio_customuser\".\"usuario_administrador\", \"repositorio_customuser\".\"codigo_confirmacion\", \"repositorio_customuser\".\"correo_confirmado\" FROM \"repositorio_customuser\" WHERE \"repositorio_customuser\".\"id\" = 1 LIMIT 21"
+      },
+      {
+        "type": "query",
+        "name": "SELECT \"repositorio_post\".\"id\", \"repositorio_post\".\"title\", \"repositorio_post\".\"content\", \"repositorio_post\".\"image\", \"repositorio_post\".\"pdf_file\", \"repositorio_post\".\"video\", \"repositorio_post\".\"fecha_de_publicacion\", \"repositorio_post\".\"author_id\", \"repositorio_post\".\"categoria\" FROM \"repositorio_post\" ORDER BY \"repositorio_post\".\"fecha_de_publicacion\" DESC LIMIT 5"
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasInicioHtml",
+    "children": [
+      {
+        "type": "function",
+        "name": "render",
+        "static": false
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasPostearHtml",
+    "children": [
+      {
+        "type": "function",
+        "name": "render",
+        "static": false
+      }
+    ]
+  }
+]

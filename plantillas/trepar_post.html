@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,70 +62,4 @@
 
     {% endblock %}
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-
-</head>
-<body>
-    {% extends 'base.html' %}
-    {% block content %}
-
-    <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6" style="margin-bottom:40px">
-            <form method="post" enctype="multipart/form-data" class="p-4 border rounded bg-light" id="p1">
-                {% csrf_token %}
-                <div class="form-group mb-3">
-                    <label for="id_title">Título:</label>
-                    {{ form.title }}
-                </div>
-                <div class="form-group mb-3">
-                    <label for="id_content">Contenido:</label>
-                    {{ form.content }}
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="id_image">Imagen:</label>
-                    {{ form.image }}
-                </div>
-                <div class="form-group mb-3">
-                    <label for="id_pdf_file">Archivo PDF:</label>
-                    {{ form.pdf_file }}
-                </div>
-
-
-
-                <div class="form-group mb-3">
-                    <label for="id_video">Video:</label>
-                    {{ form.video }}
-                </div>
-
-                <div class="flex-container" >
-                    <label for="id_categoria">Categoría:</label>
-                    {{ form.categoria }}
-                </div>
-
-
-                <div class="form-group mb-3">
-                    <label for="id_categoria" style="display: block; margin-bottom: 5px;"></label>
-                    {{ form.author }}
-                </div>
-
-                <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg w-50">Guardar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-
-
-    {% endblock %}
-</body>
->>>>>>> a8ca429b4755ad8adcd3a06b09a2b58b849f85e8
 </html>

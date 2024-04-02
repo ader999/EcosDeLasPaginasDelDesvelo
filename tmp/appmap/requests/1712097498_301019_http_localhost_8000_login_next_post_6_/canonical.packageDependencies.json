@@ -1,0 +1,26 @@
+[
+  {
+    "caller": "HTTP server requests",
+    "callee": "Database"
+  },
+  {
+    "caller": "HTTP server requests",
+    "callee": "repositorio"
+  },
+  {
+    "caller": "django",
+    "callee": "Database"
+  },
+  {
+    "caller": "django",
+    "callee": "repositorio"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "Database"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "django"
+  }
+]

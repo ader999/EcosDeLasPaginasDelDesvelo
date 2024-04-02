@@ -1,0 +1,6 @@
+[
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasLoginHtml",
+  "django/contrib/auth",
+  "django/contrib/auth::backends/ModelBackend",
+  "repositorio/views"
+]

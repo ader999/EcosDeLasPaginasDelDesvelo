@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /post/{post_id}/",
+    "parameters": "(post_id)",
+    "status": 200
+  }
+]

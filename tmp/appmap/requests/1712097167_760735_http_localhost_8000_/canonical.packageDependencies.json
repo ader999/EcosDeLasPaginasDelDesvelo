@@ -1,0 +1,22 @@
+[
+  {
+    "caller": "HTTP server requests",
+    "callee": "<templates>/UnknownSource"
+  },
+  {
+    "caller": "HTTP server requests",
+    "callee": "Database"
+  },
+  {
+    "caller": "HTTP server requests",
+    "callee": "repositorio"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasInicioHtml"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "Database"
+  }
+]

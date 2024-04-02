@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /{path}",
+    "parameters": "(path,document_root)",
+    "status": 404
+  }
+]

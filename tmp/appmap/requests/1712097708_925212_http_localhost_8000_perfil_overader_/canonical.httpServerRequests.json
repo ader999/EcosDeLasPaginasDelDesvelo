@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /perfil/{username}/",
+    "parameters": "(username)",
+    "status": 200
+  }
+]
