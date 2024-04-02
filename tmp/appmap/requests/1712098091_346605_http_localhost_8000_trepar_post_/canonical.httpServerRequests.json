@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /trepar_post/",
+    "parameters": "()",
+    "status": 200
+  }
+]

@@ -1,0 +1,14 @@
+[
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsAttrsHtml",
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsClearable_File_InputHtml",
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsInputHtml",
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsSelectHtml",
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsSelect_OptionHtml",
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsTextHtml",
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsTextareaHtml",
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsUrlHtml",
+  "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasTrepar_PostHtml",
+  "django/contrib/auth/backends/ModelBackend",
+  "django/contrib/auth/models/PermissionsMixin",
+  "repositorio/views"
+]

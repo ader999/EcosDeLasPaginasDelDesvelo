@@ -28,27 +28,27 @@
           "Sec-Fetch-Dest": "document",
           "Referer": "http://localhost:8000/",
           "Accept-Encoding": "gzip, deflate, br, zstd",
-          "Cookie": "sessionid=cohcdvkqjgwcyw3amf9kihgdskt9icun; csrftoken=807tk48P7ppoiC0sTdzbudPlBYI3DiBN; modo_fondo=modo_claro"
+          "Cookie": "sessionid=cohcdvkqjgwcyw3amf9kihgdskt9icun; csrftoken=807tk48P7ppoiC0sTdzbudPlBYI3DiBN; modo_fondo=modo_oscuro"
         }
       },
       "message": [
         {
-          "object_id": 1377442989232,
-          "value": "'yLVOfwE9sAVrHHe5lG6pEYuBSnexXIWfwBS7pqCOpPaFP94n4JvqY19MjbMqqQnS'",
+          "object_id": 1377441253296,
+          "value": "'wrKrnGfI6sgLZhEYtizK3yJSArKbx7JhuhHKxAdn3HvZ7JugclYLnBo31fi40faU'",
           "name": "csrfmiddlewaretoken",
           "class": "builtins.str"
         }
       ],
       "id": 1,
       "event": "call",
-      "thread_id": 21
+      "thread_id": 22
     },
     {
       "static": true,
       "parameters": [
         {
           "kind": "req",
-          "object_id": 1377454658688,
+          "object_id": 1377454656432,
           "value": "<WSGIRequest: POST '/cambair_fondo/'>",
           "name": "request",
           "class": "django.core.handlers.wsgi.WSGIRequest"
@@ -56,7 +56,7 @@
       ],
       "id": 2,
       "event": "call",
-      "thread_id": 21,
+      "thread_id": 22,
       "defined_class": "repositorio.views",
       "method_id": "cambiar_fondo",
       "path": "C:\\Users\\Tropi\\Documents\\prollectos\\entornos virtuales\\Django\\MyApp\\repositorio\\repositorio\\views.py",
@@ -64,7 +64,7 @@
     },
     {
       "return_value": {
-        "object_id": 1377457276864,
+        "object_id": 1377457219344,
         "value": "<HttpResponseRedirect status_code=302, \"text/html; charset=utf-8\", url=\"/\">",
         "class": "django.http.response.HttpResponseRedirect"
       },
@@ -72,7 +72,7 @@
       "elapsed": 0,
       "id": 3,
       "event": "return",
-      "thread_id": 21
+      "thread_id": 22
     },
     {
       "http_server_response": {
@@ -92,7 +92,7 @@
       "elapsed": 0,
       "id": 4,
       "event": "return",
-      "thread_id": 21
+      "thread_id": 22
     }
   ],
   "version": "1.9",
@@ -117,8 +117,8 @@
         "version": "4.2.3"
       }
     ],
-    "name": "POST /cambair_fondo/ (302) - 16:49:00.774",
-    "timestamp": 1712098140.774323,
+    "name": "POST /cambair_fondo/ (302) - 16:49:12.321",
+    "timestamp": 1712098152.321339,
     "recorder": {
       "name": "record_requests",
       "type": "requests"

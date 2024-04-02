@@ -1,0 +1,70 @@
+[
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsClearable_File_InputHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsAttrsHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsInputHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsAttrsHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsSelectHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsAttrsHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsSelectHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsSelect_OptionHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsSelect_OptionHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsAttrsHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsTextHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsInputHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsTextareaHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsAttrsHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsUrlHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsInputHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasTrepar_PostHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsClearable_File_InputHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasTrepar_PostHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsSelectHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasTrepar_PostHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsTextHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasTrepar_PostHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsTextareaHtml"
+  },
+  {
+    "caller": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasTrepar_PostHtml",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoLibSitePackagesDjangoFormsTemplatesDjangoFormsWidgetsUrlHtml"
+  },
+  {
+    "caller": "HTTP server requests",
+    "callee": "repositorio"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "<templates>/CUsersTropiDocumentsProllectosEntornosVirtualesDjangoMyappRepositorioPlantillasTrepar_PostHtml"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "Database"
+  },
+  {
+    "caller": "repositorio",
+    "callee": "django"
+  }
+]
