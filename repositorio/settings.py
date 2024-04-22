@@ -26,7 +26,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = 'RENDER' not in os.environ
-DEBUG = 'RENDER'  in os.environ
 
 ALLOWED_HOSTS = ['192.168.1.106','localhost']
 
@@ -236,6 +235,9 @@ EMAIL_PORT = 587  # Puerto para SMTP (587 para TLS, 465 para SSL)
 EMAIL_USE_TLS = True  # Habilitar TLS (o SSL si estás usando el puerto 465)
 EMAIL_HOST_USER =  os.environ.get('EMAIL_USER')  # Tu dirección de correo desde la que enviarás los mensajes
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PWS')  # Contraseña de tu correo electrónico
+
+
+DEBUG = 'RENDER'  in os.environ
 
 
 AUTH_USER_MODEL = 'repositorio.CustomUser'
