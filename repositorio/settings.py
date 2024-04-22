@@ -27,6 +27,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = 'RENDER' not in os.environ
 
+DEBUG = False
+
 # Verifica si estamos en el entorno de renderizado
 RENDER_DEBUG = os.environ.get('RENDER', '').lower() == 'true'
 
