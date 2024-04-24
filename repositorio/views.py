@@ -300,7 +300,9 @@ def inicio(request):
 @validar_correo_confirmado
 def detalle_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
-    return render(request, 'detalle_post.html', {'post': post,'usr':pasar_usuario(request)})
+    nombre_archivo = post.pdf_file.name
+    buscar = ".epub" if ".epub" in nombre_archivo else ".pdf"
+    return render(request, 'detalle_post.html', {'post': post, 'usr': pasar_usuario(request), 'buscar': buscar})
 
 def registro_usuario(request):
     if request.method == 'POST':
@@ -472,3 +474,7 @@ def cambiar_fondo(request):
     response.set_cookie('modo_fondo', nuevo_modo, expires=None)
 
     return response
+
+def valoracion(request):
+
+    pass

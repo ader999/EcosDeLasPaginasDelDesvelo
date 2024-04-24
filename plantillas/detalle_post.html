@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% extends 'base.html' %}
+    {% load static %}
     <title>Detalle del Post</title>
 </head>
 <body>
-    {% extends 'base.html' %}
+
     {% block content %}
     <div class="container mt-5 d-flex justify-content-center align-items-center">
         <div class="text-center col-md-8">
@@ -20,16 +22,29 @@
             <p>{{ post.content }}</p>
 
             {% if post.pdf_file %}
-               <p>
-                    <a href="{{ post.pdf_file.url }}" target="_blank" class="btn btn-danger">
-                        <i class="fas fa-eye"></i> Ver PDF
-                    </a>
-                    <a href="{{ post.pdf_file.url }}" download class="btn btn-danger">
-                        <i class="fas fa-download"></i> Descargar PDF
-                    </a>
+                <p>
+
+                        {% if buscar == ".epub" %}
+                            <a href="{{ post.pdf_file.url }}" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-eye"></i> Ver EPUB
+
+                            <a href="{{ post.pdf_file.url }}" download class="btn btn-primary">
+                                <i class="fas fa-download"></i> Descargar EPUB
+                            </a>
+                        {% else %}
+                            <a href="{{ post.pdf_file.url }}" target="_blank" class="btn btn-danger ">
+                                <i class="fas fa-eye"></i> Ver PDF
+                            </a>
+                            <a href="{{ post.pdf_file.url }}" download class="btn btn-danger">
+                                <i class="fas fa-download"></i> Descargar PDF
+                            </a>
+                        {% endif %}
+
+
                 </p>
 
             {% endif %}
+
 
             <p><strong>Autor: <a href="{% url 'perfil' username=post.author.username %}">{{ post.author }}</a></strong></p>
 

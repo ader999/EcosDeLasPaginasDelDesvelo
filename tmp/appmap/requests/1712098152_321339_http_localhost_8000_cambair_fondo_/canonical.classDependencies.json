@@ -1,6 +1,0 @@
-[
-  {
-    "caller": "POST /cambair_fondo/",
-    "callee": "repositorio/views"
-  }
-]

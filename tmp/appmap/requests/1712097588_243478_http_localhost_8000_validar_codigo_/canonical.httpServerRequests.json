@@ -1,7 +1,0 @@
-[
-  {
-    "route": "GET /validar_codigo/",
-    "parameters": "()",
-    "status": 200
-  }
-]

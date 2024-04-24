@@ -79,6 +79,9 @@ class Post(models.Model):
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE,editable=False)
     categoria = models.CharField(max_length=255,choices=lista_areasConocimiento)
 
+    likes = models.PositiveIntegerField(default=0)
+    dislikes = models.PositiveIntegerField(default=0)
+
     def __str__(self):
         return self.title
 

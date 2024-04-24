@@ -1,6 +1,0 @@
-[
-  "<templates>/UnknownSource",
-  "django/contrib/auth/backends/ModelBackend",
-  "django/contrib/auth/models/PermissionsMixin",
-  "repositorio/views"
-]

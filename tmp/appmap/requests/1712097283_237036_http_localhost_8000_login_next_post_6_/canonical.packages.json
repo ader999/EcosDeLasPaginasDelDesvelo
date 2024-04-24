@@ -1,5 +1,0 @@
-[
-  "django/contrib",
-  "django/contrib/auth::backends",
-  "repositorio"
-]
